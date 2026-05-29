@@ -8,14 +8,14 @@ export class Chicken extends Enemy {
 
     //Position
     this.x = Math.random() * 2000 + 200;
-    this.y = isSmall ? 400 : 380;
+    this.y = isSmall ? 390 : 360;
 
     //Größe
-    this.width = isSmall ? 40 : 60;
-    this.height = isSmall ? 40 : 60;
+    this.width = isSmall ? 50 : 80;
+    this.height = isSmall ? 50 : 80;
 
     //Bewegungsgeschwindigkeit
-    this.speedX = isSmall ? 1.5 : 1;
+    this.speedX = isSmall ? 0.8 : 0.3;
 
     //Image Cache
     this.imgCache = {};

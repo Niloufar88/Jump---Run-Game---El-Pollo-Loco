@@ -33,6 +33,9 @@ export class Character extends MovableObject {
     //Health
     this.health = 100;
 
+    //Keyboard
+    this.keyboard = null;
+
     //Bilder Arrays
     this.idleImages = [
       "assets/img/pepe-character/idle/I-1.png",

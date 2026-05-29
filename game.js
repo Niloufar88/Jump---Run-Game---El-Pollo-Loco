@@ -1,11 +1,13 @@
 //===== IMPORT MODULES =====
-import { Character } from "./JavaScript/models/Character.class.js";
+
 import {
   WORLD_WIDTH,
   WORLD_START,
   WORLD_END,
 } from "./JavaScript/configs/constants.js";
+import { Character } from "./JavaScript/models/Character.class.js";
 import { Chicken } from "./JavaScript/models/Chicken.class.js";
+import { keyboard } from "./JavaScript/configs/keyboard.js";
 //==========================
 
 //===== GAME SETUP =========
@@ -17,6 +19,7 @@ let ctx = canvas.getContext("2d");
 
 //===== GAME OBJECTS ========
 const pepe = new Character();
+pepe.keyboard = keyboard;
 
 //========= Enemy Array erstellen =============
 let enemies = [];
