@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "Luckiest Guy";
+  src: url("assets/Fonts/Luckiest_Guy/LuckiestGuy-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("assets/img/Desierto\ paisaje\ con\ cactus\,\ rocoso\ acantilados\,\ y\ brillante\ azul\ cielo_\ dibujos\ animados\ ilustración.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+  filter: blur(5px) brightness(0.8);
+  opacity: 0.85;
+}
+
+#myCanvas {
+  background-image: url("assets/img/background-layers/air.png");
+  z-index: 1;
+  position: relative;
+}
