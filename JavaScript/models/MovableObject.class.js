@@ -15,6 +15,14 @@ export class MovableObject extends GameObject {
     this.img.src = path;
   }
 
+  loadImages(images) {
+    images.forEach((path) => {
+      let img = new Image();
+      img.onload = () => {};
+      img.src = path;
+    });
+  }
+
   draw(ctx) {
     if (this.img) {
       ctx.drawImage(this.img, this.x, this.y, this.width, this.height);

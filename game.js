@@ -1,5 +1,11 @@
 //===== IMPORT MODULES =====
 import { Character } from "./JavaScript/models/Character.class.js";
+import {
+  WORLD_WIDTH,
+  WORLD_START,
+  WORLD_END,
+} from "./JavaScript/configs/constants.js";
+import { Chicken } from "./JavaScript/models/Chicken.class.js";
 //==========================
 
 //===== GAME SETUP =========
@@ -12,6 +18,13 @@ let ctx = canvas.getContext("2d");
 //===== GAME OBJECTS ========
 const pepe = new Character();
 
+//========= Enemy Array erstellen =============
+let enemies = [];
+for (let i = 0; i < 15; i++) {
+  enemies.push(new Chicken());
+}
+//==========================================
+
 //==========================
 
 //===== GAME LOOP ===========
@@ -20,6 +33,12 @@ function gameLoop() {
 
   pepe.draw(ctx);
   pepe.drawCollisionBox(ctx);
+
+  enemies.forEach((enemy) => {
+    enemy.updateChicken();
+    enemy.draw(ctx);
+    enemy.drawCollisionBox(ctx);
+  });
 
   window.requestAnimationFrame(gameLoop);
 }

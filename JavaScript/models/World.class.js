@@ -1,11 +1,17 @@
 // export class World {
-//   constructor(ctx, x, y, width, height) {
+//   character = new Character();
+//   enemies = [];
+//   ctx;
+//   canvas;
+
+//   constructor(ctx, x, y, width, height, canvas) {
 //     //Position
 //     this.x = x;
 //     this.y = y;
 //     this.width = width;
 //     this.height = height;
-//     this.ctx = ctx;
-//     this.character = new Character();
+
+//     this.canvas = document.getElementById("myCanvas");
+//     ctx = this.canvas.getContext("2d");
 //   }
 // }
