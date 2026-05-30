@@ -5,9 +5,10 @@ import {
   WORLD_START,
   WORLD_END,
 } from "./JavaScript/configs/constants.js";
+import { keyboard } from "./JavaScript/configs/keyboard.js";
 import { Character } from "./JavaScript/models/Character.class.js";
 import { Chicken } from "./JavaScript/models/Chicken.class.js";
-import { keyboard } from "./JavaScript/configs/keyboard.js";
+
 //==========================
 
 //===== GAME SETUP =========
@@ -20,6 +21,7 @@ let ctx = canvas.getContext("2d");
 //===== GAME OBJECTS ========
 const pepe = new Character();
 pepe.keyboard = keyboard;
+pepe.worldWidth = WORLD_WIDTH;
 
 //========= Enemy Array erstellen =============
 let enemies = [];
@@ -34,6 +36,8 @@ for (let i = 0; i < 15; i++) {
 function gameLoop() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+  pepe.applyGravity();
+  pepe.characterUpdate();
   pepe.draw(ctx);
   pepe.drawCollisionBox(ctx);
 
